@@ -1,11 +1,18 @@
 # chasing-stars
-**A game featuring a character that grows while collecting stars!**
 
 ![Game Screenshot](screenshots/chasingStars-screen.png)
 
-This is my first game built with the Pygame library. It works with Python 2.7 and 3. Yay!
+## About
 
-Let's get started!
+A game featuring a character that grows in size while collecting stars!
+
+## Key Features
+
+* Players are able to use keyboard arrow functions to move, gain points, and expand in size as they collide with stars. Works with Python 2.7 and 3. Yay! :) 
+
+## Technologies
+
+* Python, PyGame Library 
 
 ## Installations
 
