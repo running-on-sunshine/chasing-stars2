@@ -10,21 +10,20 @@ WIDTH = 800
 HEIGHT = 600
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 pygame.display.set_caption('Chasing Stars: A Collecting Game!')
-# pygame.mouse.set_visible(False)
 
 # set up font + text color
 font = pygame.font.SysFont(None, 48)
 TEXTCOLOR = (0, 0, 0)
 
 # set up images
-# ==BACKGROUND==
+# == BACKGROUND ==
 background = pygame.image.load("backgrounds/snow-scene.png").convert()
 backgroundScale = pygame.transform.scale(background, (800, 600))
-# ==PLAYER==
+# == PLAYER ==
 player = pygame.Rect(300, 10, 40, 40)
 playerImg = pygame.image.load('characters/walk2.png')
 playerGrowImg = pygame.transform.scale(playerImg, (40, 40))
-# ==STAR==
+# == STAR ==
 starImg = pygame.image.load('items/star.png')
 starImgSize = pygame.transform.scale(starImg, (60, 60))
 
@@ -43,29 +42,11 @@ def terminate():
     pygame.quit()
     sys.exit()
 
-# def pressedKey():
-#     while True:
-#         for event in pygame.event.get():
-#             if event.type == QUIT:
-#                 terminate()
-#             if event.type == KEYDOWN:
-#                 if event.key == K_ESCAPE:
-#                     terminate()
-#                 return
-
 def drawText(text, font, surface, x, y):
     textobj = font.render(text, 1, TEXTCOLOR)
     textrect = textobj.get_rect()
     textrect.topleft = (x, y)
     surface.blit(textobj, textrect)
-
-# # show 'START' screen
-# SCREEN.fill((167, 239, 233))
-# # font = pygame.font.SysFont(None, 80)
-# drawText('Collecting Stars!', font, SCREEN, (WIDTH / 4), (HEIGHT / 3))
-# # drawText('Press any key to start.', font, SCREEN, (WIDTH / 2) - 30, (HEIGHT / 2) + 50)
-# pygame.display.update()
-# pressedKey()
 
 # run the game loop
 while True:
@@ -105,9 +86,6 @@ while True:
                 if event.key == pygame.K_DOWN:
                     moveDown = False
 
-            # if event.type == MOUSEBUTTONUP:
-            #     stars.append(pygame.Rect(event.pos[0] - 10, event.pos[1] - 10, 20, 20))
-
         starCounter += 1
         if starCounter >= newStar:
             # add new star
@@ -138,7 +116,7 @@ while True:
         for star in stars [:]:
             if player.colliderect(star):
                 stars.remove(star)
-                # ===PLAYER GROWS IN SIZE WITH EVERY STAR COLLECTION===
+                # === PLAYER GROWS IN SIZE WITH EVERY STAR COLLECTION ===
                 player = pygame.Rect(player.left, player.top, player.width + 2, player.height + 2)
                 playerGrowImg = pygame.transform.scale(playerImg, (player.width, player.height))
                 score += 1 # increase score
@@ -151,8 +129,3 @@ while True:
         # draw the window onto the screen
         pygame.display.update()
         mainClock.tick(40)
-
-
-
-
-
