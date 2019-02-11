@@ -53,8 +53,8 @@ while True:
     starCounter = 0
     newStar = 20
     stars = []
-    for i in range(20):
-        stars.append(pygame.Rect(random.randint(0, WIDTH - 20), random.randint(0, HEIGHT - 20), 20, 20))
+    # for i in range(20):
+    #     stars.append(pygame.Rect(random.randint(0, WIDTH - 20), random.randint(0, HEIGHT - 20), 20, 20))
     
     score = 0
 
