@@ -4,11 +4,14 @@
 
 ## About
 
-A game featuring a character that grows in size while collecting stars!
+A Pygame featuring a character that grows in size while collecting stars!
 
 ## Key Features
 
-* Players are able to use keyboard arrow functions to move, gain points, and expand in size as they collide with stars. Works with Python 2.7 and 3. Yay! :) 
+* Players can use keyboard arrow functions to move the character
+* Players can gain points by collecting stars that randomly pop up
+* The character grows bigger with each star collected
+* Game works with Python 2.7 and 3
 
 ## Technologies
 
@@ -39,14 +42,3 @@ Now that we have everything we need installed, let's really get started!
   python chasingStars.py
   ```
 * If everything runs smoothly, you'll see an 800 x 600 screen pop up with the game. Have fun! I hope it gives you even the slightest bit of joy playing it as I did making it! :)
-
-## Having Trouble?
-
-* If you have trouble with any of the steps above, please feel free to send me an email. I'd love to help! Email me at khuu.liz [at] gmail.com.
-
-## To Do:
-
-The work is still not finished yet.
-
-- Refactor code as classes
-- Maybe add items dropping from the sky. If they touch our hero/ine character, the character will decrease in size/points?
